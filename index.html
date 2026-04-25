@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Arquivo de Histórias</title>
+    <style>
+        /* CSS para dar um visual moderno e limpo */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 { color: #2c3e50; }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+        }
+
+        /* Estilo dos Cards das Histórias */
+        .story-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .story-card h2 {
+            margin-top: 0;
+            color: #2980b9;
+        }
+
+        .story-card p {
+            line-height: 1.6;
+        }
+
+        /* O segredo para o Google Docs aparecer no site */
+        .doc-container {
+            position: relative;
+            width: 100%;
+            height: 500px; /* Altura da janela de leitura */
+            border: 1px solid #ddd;
+            margin-top: 15px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .btn-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #2980b9;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn-link:hover { background-color: #3498db; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Minhas Histórias Próprias</h1>
+    <p>Um repositório pessoal de contos e crônicas.</p>
+</header>
+
+<div class="container">
+
+    <div class="story-card">
+        <h2>O Livro Amaldiçoado</h2>
+        <p>colocar a sinpse aqui.</p>
+        
+        <div class="doc-container">
+            <iframe src="https://docs.google.com/document/d/e/2PACX-1vRY7oe0X265-dinTyL12ep0IFhEjjaULdvb4HCb61Ot09wD6ZsWDBtOt0EPOvBIoz1t5LYjjOcz8a46/pub?embedded=true"></iframe>"></iframe>
+        </div>
+        <a href="https://docs.google.com/document/d/1Gw4U7e1amEd6D_PiHD2coxOfe6AfCgS8Qp6jdrw4C6E/edit?usp=sharing" class="btn-link" target="_blank">Abrir em tela cheia</a>
+    </div>
+
+    <div class="story-card">
+        <h2>Título da História 2</h2>
+        <p>Se você preferir não embutir o documento para deixar a página mais leve, pode usar apenas um card com o link direto.</p>
+        <a href="LINK_COMPARTILHAVEL_DO_DOC" class="btn-link" target="_blank">Ler História Completa</a>
+    </div>
+
+</div>
+
+</body>
+</html>
