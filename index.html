@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Arquivo de Histórias</title>
+    <title>Minha Estante de Histórias</title>
     <style>
-        /* CSS para dar um visual moderno e limpo */
+        /* Estilo Dark inspirado em bibliotecas digitais */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
             margin: 0;
-            padding: 20px;
+            padding: 40px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -19,89 +19,111 @@
 
         header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
 
-        h1 { color: #2c3e50; }
+        h1 { color: #3498db; margin-bottom: 10px; }
 
-        .container {
+        /* A Estante (Grid) */
+        .estante {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 30px;
             width: 100%;
-            max-width: 900px;
+            max-width: 1000px;
         }
 
-        /* Estilo dos Cards das Histórias */
-        .story-card {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
+        /* O Card do Livro */
+        .livro-card {
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: inherit;
+            border: 1px solid #333;
+            display: flex;
+            flex-direction: column;
         }
 
-        .story-card h2 {
-            margin-top: 0;
-            color: #2980b9;
+        .livro-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            border-color: #3498db;
         }
 
-        .story-card p {
-            line-height: 1.6;
-        }
-
-        /* O segredo para o Google Docs aparecer no site */
-        .doc-container {
-            position: relative;
+        /* Container da Capa */
+        .capa-container {
             width: 100%;
-            height: 500px; /* Altura da janela de leitura */
-            border: 1px solid #ddd;
-            margin-top: 15px;
+            height: 320px; /* Proporção de capa de livro */
+            background-color: #2c3e50;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
         }
 
-        iframe {
+        .capa-container img {
             width: 100%;
             height: 100%;
-            border: none;
+            object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
         }
 
-        .btn-link {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 15px;
-            background-color: #2980b9;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
+        .capa-placeholder {
+            font-weight: bold;
+            color: #5d6d7e;
+            text-align: center;
+            padding: 20px;
         }
 
-        .btn-link:hover { background-color: #3498db; }
+        /* Info do Livro */
+        .livro-info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .livro-info h2 {
+            font-size: 1.1rem;
+            margin: 0 0 8px 0;
+            color: #fff;
+        }
+
+        .livro-info p {
+            font-size: 0.85rem;
+            color: #bbb;
+            margin: 0;
+            line-height: 1.4;
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Minhas Histórias Próprias</h1>
-    <p>Um repositório pessoal de contos e crônicas.</p>
+    <h1>Minha Biblioteca Digital</h1>
+    <p>Clique na capa para ler a história completa no Google Docs.</p>
 </header>
 
-<div class="container">
+<div class="estante">
 
-    <div class="story-card">
-        <h2>O Livro Amaldiçoado</h2>
-        <p>colocar a sinpse aqui.</p>
-        
-        <div class="doc-container">
-            <iframe src="https://docs.google.com/document/d/e/2PACX-1vRY7oe0X265-dinTyL12ep0IFhEjjaULdvb4HCb61Ot09wD6ZsWDBtOt0EPOvBIoz1t5LYjjOcz8a46/pub?embedded=true"></iframe>"></iframe>
+    <a href="https://docs.google.com/document/d/1Gw4U7e1amEd6D_PiHD2coxOfe6AfCgS8Qp6jdrw4C6E/edit?usp=sharing" target="_blank" class="livro-card">
+        <div class="capa-container">
+            <img src="https://via.placeholder.com/220x320?text=O+Livro+Amaldiçoado" alt="Capa O Livro Amaldiçoado">
         </div>
-        <a href="https://docs.google.com/document/d/1Gw4U7e1amEd6D_PiHD2coxOfe6AfCgS8Qp6jdrw4C6E/edit?usp=sharing" class="btn-link" target="_blank">Abrir em tela cheia</a>
-    </div>
+        <div class="livro-info">
+            <h2>O Livro Amaldiçoado</h2>
+            <p>Uma sinopse instigante sobre mistérios e sombras.</p>
+        </div>
+    </a>
 
-    <div class="story-card">
-        <h2>Wasted</h2>
-        <p>Atribuir a sinopse.</p>
-        <div>
-            <iframe src="https://docs.google.com/document/d/e/2PACX-1vSvWidVIQcZyRo83hS2JQ0XTW9z-7t2pbK5qg-7dJYwdDz2Gf6cVTdSYuZfj1EHsRLdVdw2rmhIZgLO/pub?embedded=true"></iframe>
+    <a href="https://docs.google.com/document/d/12poHRCAghAmmvW-oyXqn0ee-vBwbsGB8sE13vbeX3lU/edit?usp=sharing" target="_blank" class="livro-card">
+        <div class="capa-container">
+            <img src="https://via.placeholder.com/220x320?text=Wasted" alt="Capa Wasted">
         </div>
-        <a href="https://docs.google.com/document/d/12poHRCAghAmmvW-oyXqn0ee-vBwbsGB8sE13vbeX3lU/edit?usp=sharing" class="btn-link" target="_blank">Ler História Completa</a>
-    </div>
+        <div class="livro-info">
+            <h2>Wasted</h2>
+            <p>Uma transmissão desesperada vinda de um lugar esquecido.</p>
+        </div>
+    </a>
 
 </div>
 
